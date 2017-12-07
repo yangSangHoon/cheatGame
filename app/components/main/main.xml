@@ -1,0 +1,3 @@
+<StackLayout loaded="onLoad">
+    <Button text="가위바위보" id="btnRock" class="listButton"/>
+</StackLayout>
