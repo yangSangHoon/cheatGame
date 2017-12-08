@@ -15,10 +15,10 @@ export default class RockUser {
 
         this.imgUrl = this.imgUrls[0];
         this.startRolling();
-        this.eventsetting();
+        this.eventSetting();
     }
 
-    eventsetting() {
+    eventSetting() {
         this.user.on(buttonModule.Button.tapEvent, () => {
             clearInterval(this.timer);
             this.select();
@@ -60,6 +60,6 @@ export default class RockUser {
     reset() {
         clearInterval(this.timer);
         this.startRolling();
-        this.eventsetting();
+        this.eventSetting();
     }
 }

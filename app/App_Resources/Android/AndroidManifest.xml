@@ -26,13 +26,14 @@
 		android:theme="@style/AppTheme">
 
 		<activity
-			android:name="com.tns.NativeScriptActivity"
+			android:name="com.tns.MyActivity"
 			android:label="@string/title_activity_kimera"
 			android:configChanges="keyboardHidden|orientation|screenSize"
 			android:theme="@style/LaunchScreenTheme">
 
 			<meta-data android:name="SET_THEME_ON_LAUNCH" android:resource="@style/AppTheme" />
-
+			<meta-data android:name="com.google.android.gms.version"
+					   android:value="@integer/google_play_services_version" />
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
 				<category android:name="android.intent.category.LAUNCHER" />

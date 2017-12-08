@@ -20,4 +20,11 @@ components that have the btn class name.
     font-size: 18;
 }
 
-.listButton{background-color: blue;}
+.listButton{background-color: white;}
+
+.fast{border: 1px solid red;}
+.fast .bottom{border-bottom: 5px solid blue; height:50%}
+.fast .user{border-radius: 50%; width:180px; height:180px; border: 2px solid blue;
+    background-color: red; position: absolute;}
+.fast .btn{height:100px;}
+.fast .user.v2{ border: 1px solid blue}

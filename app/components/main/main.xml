@@ -1,3 +1,4 @@
 <StackLayout loaded="onLoad">
     <Button text="가위바위보" id="btnRock" class="listButton"/>
+    <Button text="빨리누르기" id="btnFast" class="listButton"/>
 </StackLayout>
