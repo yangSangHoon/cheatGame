@@ -1,14 +1,18 @@
 import view = require("ui/core/view");
 import buttonModule = require("ui/button");
 import frameModule = require("ui/frame");
+import viewBuilder = require("ui/builder");
 
 class Fast{
     private user1;
     private user2;
 
-    constructor(view){
-        this.user1 = view.getViewById('user1');
-        this.user2 = view.getViewById('user2');
+    constructor(page){
+        const layout = page.getViewById('fastLayout');
+        this.user1 = viewBuilder.load({ path: 'components/fast/user', name: 'user' });
+        this.user2 = viewBuilder.load({ path: 'components/fast/user', name: 'user' });
+        layout.addChild(this.user1);
+        layout.addChild(this.user2);
     }
 
     init() {
@@ -16,6 +20,5 @@ class Fast{
 }
 
 export function onLoad(args: any) {
-    console.dir(args.object);
     new Fast(args.object);
 }
