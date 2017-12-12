@@ -1,6 +1,6 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" class="page" loaded="onLoad" xmlns:user="components/fast/user">
-    <StackLayout class="fast">
+    <AbsoluteLayout class="fast">
         <user:user id="user1" move="1" />
-        <user:user id="user2" move="-1" />
-    </StackLayout>
+        <user:user id="user2" move="-1" top="200"/>
+    </AbsoluteLayout>
 </Page>

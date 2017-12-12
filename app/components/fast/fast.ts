@@ -16,6 +16,5 @@ class Fast{
 }
 
 export function onLoad(args: any) {
-    console.dir(args.object);
     new Fast(args.object);
 }

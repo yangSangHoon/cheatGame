@@ -1,4 +1,4 @@
-<StackLayout class="fast" loaded="onLoad">
+<AbsoluteLayout class="fast" loaded="onLoad">
     <Button class="btn" id="btn"/>
     <Image class="user" id="player"/>
-</StackLayout>
+</AbsoluteLayout>

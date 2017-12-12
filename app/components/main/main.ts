@@ -10,6 +10,9 @@ class MainPage{
         this.btnRock = view.getViewById('btnRock');
         this.btnFast = view.getViewById('btnFast');
         this.eventSetting();
+
+        //test
+        this.goFast();
     }
 
     eventSetting(){
@@ -18,9 +21,13 @@ class MainPage{
             topmost.navigate("components/rock/rock");
         })
         this.btnFast.on(buttonModule.Button.tapEvent, () => {
-            const topmost = frameModule.topmost();
-            topmost.navigate("components/fast/fast");
+            this.goFast();
         })
+    }
+
+    goFast() {
+        const topmost = frameModule.topmost();
+        topmost.navigate("components/fast/fast");
     }
 }
 
