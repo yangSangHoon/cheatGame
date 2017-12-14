@@ -1,29 +1,37 @@
 import buttonModule = require("ui/button");
+import {AbsoluteLayout} from 'ui/layouts/absolute-layout';
+export const top = 100;
 
 class User{
+    private view;
     private btn;
+    private move: number = 0;
+    private player;
 
-    constructor(page){
-        this.btn = page.getViewById('btn');
+    constructor(view){
+        this.view = view;
+        this.btn = view.getViewById('btn');
+        this.player = view.getViewById('player');
+        this.move = Number(view.move);
+        this.setPosition();
         this.eventSetting();
+    }
+
+    setPosition() {
     }
 
     eventSetting() {
         this.btn.on(buttonModule.Button.tapEvent, () => {
-            alert(1);
+            AbsoluteLayout.setTop(this.player, Number(this.player.top) + 5);
         })
     }
 
-    move(){
-        alert('move');
+    setMove(value) {
+
     }
 }
 
 
 export function onLoad(args: any) {
-    return new User(args.object);
-}
-
-export function move(value){
-    alert(value)
+    new User(args.object);
 }

@@ -10,6 +10,9 @@ class MainPage{
         this.btnRock = view.getViewById('btnRock');
         this.btnFast = view.getViewById('btnFast');
         this.eventSetting();
+
+        //test
+        //this.goPushBall();
     }
 
     eventSetting(){
@@ -18,9 +21,18 @@ class MainPage{
             topmost.navigate("components/rock/rock");
         })
         this.btnFast.on(buttonModule.Button.tapEvent, () => {
-            const topmost = frameModule.topmost();
-            topmost.navigate("components/fast/fast");
+            this.goPushBall();
         })
+    }
+
+    goFast() {
+        const topmost = frameModule.topmost();
+        topmost.navigate("components/fast/fast");
+    }
+
+    goPushBall() {
+        const topmost = frameModule.topmost();
+        topmost.navigate("components/pushBall/pushBall");
     }
 }
 

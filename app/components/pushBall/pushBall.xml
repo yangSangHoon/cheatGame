@@ -1,0 +1,10 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" class="page" loaded="onLoad">
+    <FlexboxLayout flexDirection="column">
+        <Button width="35%" id="user1" text="player1" rotate="180" />
+        <AbsoluteLayout id="stage" height="500" style="background-color:blue">
+            <Image src="~/images/aa.png" height="20" width="20" id="ball" left="200"/>
+            <Image src="~/images/aa.png" height="50" width="50" id="refresh" />
+        </AbsoluteLayout>
+        <Button width="35%" id="user2" text="player2"/>
+    </FlexboxLayout>
+</Page>
