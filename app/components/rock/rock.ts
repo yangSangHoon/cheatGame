@@ -1,5 +1,9 @@
 import {RockModel} from './RockModel';
 
+let rockModel = null;
 export function onLoad(args: any) {
-    new RockModel(args.object);
+    console.log('rockModel', rockModel);
+    if (rockModel) {
+        rockModel = new RockModel(args.object);
+    }
 }

@@ -1,0 +1,7 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var utils_1 = require("utils/utils");
+exports.getHeight = function (view) {
+    return utils_1.layout.toDeviceIndependentPixels(view.getMeasuredHeight());
+};
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidXRpbHMuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJ1dGlscy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLHFDQUFtQztBQUV0QixRQUFBLFNBQVMsR0FBRyxVQUFBLElBQUk7SUFDekIsTUFBTSxDQUFDLGNBQU0sQ0FBQyx5QkFBeUIsQ0FBQyxJQUFJLENBQUMsaUJBQWlCLEVBQUUsQ0FBQyxDQUFDO0FBQ3RFLENBQUMsQ0FBQSIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7bGF5b3V0fSBmcm9tIFwidXRpbHMvdXRpbHNcIjtcblxuZXhwb3J0IGNvbnN0IGdldEhlaWdodCA9IHZpZXcgPT4ge1xuICAgIHJldHVybiBsYXlvdXQudG9EZXZpY2VJbmRlcGVuZGVudFBpeGVscyh2aWV3LmdldE1lYXN1cmVkSGVpZ2h0KCkpO1xufSJdfQ==

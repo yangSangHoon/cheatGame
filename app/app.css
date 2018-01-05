@@ -20,6 +20,12 @@ components that have the btn class name.
     font-size: 18;
 }
 
+#container{background-color:cadetblue;}
+#container .test{position: absolute; left:50%; top:50%;}
+
+.hide{display: none;}
+.show{display: block;}
+
 .listButton{background-color: white;}
 
 .fast{border: 1px solid red;}
@@ -28,3 +34,10 @@ components that have the btn class name.
     background-color: red; position: absolute;}
 .fast .btn{height:100px;}
 .fast .user.v2{ border: 1px solid blue}
+
+.pushBall{}
+.pushBall .player{background-color:#4c7ece; color:#333;}
+.pushBall .player.end{background-color:#333; color:#fff;}
+.pushBall #ball{border-radius: 50%; background-color:red;}
+.pushBall .stage{background-color:#fff7d3;}
+.pushBall #refresh{position:absolute; left:50%; top:50%; width:50; heigth:50;}

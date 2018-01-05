@@ -47,3 +47,64 @@ export function doCreateSmartBanner(){
         }
     );
 }
+
+
+//import view = require("ui/core/view");
+import buttonModule = require("ui/button");
+import frameModule = require("ui/frame");
+
+let mainPage = null
+
+class MainPage{
+    private btnRock;
+    private btnFast;
+    private topmost = frameModule.topmost();
+    constructor(view){
+        this.btnRock = view.getViewById('btnRock');
+        this.btnFast = view.getViewById('btnFast');
+        this.eventSetting();
+
+        //test
+        //this.goPushBall();
+    }
+
+    eventSetting(){
+        this.btnRock.on(buttonModule.Button.tapEvent, () => {
+            this.goRock();
+        })
+        this.btnFast.on(buttonModule.Button.tapEvent, () => {
+            this.goPushBall();
+        })
+    }
+
+    goRock() {
+        this.topmost.navigate({
+            moduleName: "components/rock/rock",
+            animated: true,
+            backstackVisible: false
+        });
+    }
+
+    goFast() {
+        this.topmost.navigate({
+            moduleName: "components/fast/fast",
+            animated: true,
+            backstackVisible: false
+        });
+    }
+
+    goPushBall() {
+        this.topmost.navigate({
+            moduleName: "components/pushBall/pushBall",
+            animated: true,
+            backstackVisible: false
+        });
+    }
+
+}
+
+export function navigated(args: any) {
+    if (!mainPage) {
+        mainPage = new MainPage(args.object);
+    }
+}

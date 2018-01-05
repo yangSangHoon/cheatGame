@@ -5,7 +5,7 @@ import frameModule = require("ui/frame");
 class MainPage{
     private btnRock;
     private btnFast;
-
+    private topmost = frameModule.topmost();
     constructor(view){
         this.btnRock = view.getViewById('btnRock');
         this.btnFast = view.getViewById('btnFast');
@@ -17,22 +17,24 @@ class MainPage{
 
     eventSetting(){
         this.btnRock.on(buttonModule.Button.tapEvent, () => {
-            const topmost = frameModule.topmost();
-            topmost.navigate("components/rock/rock");
+            this.goRock();
         })
         this.btnFast.on(buttonModule.Button.tapEvent, () => {
             this.goPushBall();
         })
     }
 
+    goRock() {
+        this.topmost.navigate("components/rock/rock");
+    }
+
     goFast() {
-        const topmost = frameModule.topmost();
-        topmost.navigate("components/fast/fast");
+
+        this.topmost.navigate("components/fast/fast");
     }
 
     goPushBall() {
-        const topmost = frameModule.topmost();
-        topmost.navigate("components/pushBall/pushBall");
+        this.topmost.navigate("components/pushBall/pushBall");
     }
 }
 

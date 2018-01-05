@@ -1,6 +1,7 @@
-<Page xmlns="http://schemas.nativescript.org/tns.xsd" class="page" xmlns:main="components/main">
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" class="page" navigatedTo="navigated">
     <StackLayout>
-        <main:main />
+        <Button text="가위바위보" id="btnRock" class="listButton"/>
+        <Button text="빨리누르기" id="btnFast" class="listButton"/>
         <Button height="50" text="smart banner" tap="doCreateSmartBanner" />
     </StackLayout>
 </Page>
